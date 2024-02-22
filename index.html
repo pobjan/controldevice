@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Video Player JavaScript</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/roboto.css">
+    <link rel="stylesheet" href="icons/icon.css">
+  </head>
+  <body>
+    <section class="context-menu"></section>
+    <div class="container show-controls">
+        <div class="wrapper">
+            <div class="video-timeline">
+                <div class="progress-area">
+                    <span>00:00</span>
+                    <div class="progress-bar"></div>
+            </div>
+            </div>
+            <ul class="video-controls">
+                <li class="options left">
+                    <button class="volume">
+                        <i class="vm-volume-high" id="volume-icon"> <i></i> <i></i> <i></i> <i></i> <i></i> </i>
+                    </button>
+                    <input class="volume-range" type="range" min="0" max="1" step="any" value="1">
+                    <div class="video-timer">
+                        <p class="current-time">00:00</p>
+                        <p class="separator">/</p>
+                        <p class="video-duration">03:03</p>
+                    </div>
+                </li>
+                <li class="options center">
+                    <button class="skip-backward"><i class="vm-backward-step"></i></button>
+                    <button class="play-pause"><i class="vm-play"></i></button>
+                    <button class="skip-forward"><i class="vm-forward-step"></i></button>
+                </li>
+                <li class="options right">
+                    <button class="setting"><i class="vm-gear"></i></button>
+                    <button class="repeat">
+                        <i class="vm-repeat"><i></i><i></i></i>
+                    </button>
+                    <button class="replay"><i class="vm-rotate-left"></i></button>
+                    <div class="playback-content">
+                        <button class="video-speed"><i class="vm-video-speed"></i></button>
+                        <ul class="speed-options">
+                            <li data-speed="2">2x</li>
+                            <li data-speed="1.5">1.5x</li>
+                            <li data-speed="1" class="active">Normal</li>
+                            <li data-speed="0.75">0.75x</li>
+                            <li data-speed="0.5">0.5x</li>
+                        </ul>
+                    </div>
+                    <button class="pic-in-pic"><i class="vm-mini-screen"></i></button>
+                    <button class="fullscreen"><i class="vm-expand"></i></button>
+                </li>
+            </ul>
+        </div>
+        <video src="demo-video.mp4"></video>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
